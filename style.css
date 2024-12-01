@@ -1,0 +1,211 @@
+ /* Reset dan box sizing */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dan Font */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: justify;
+}
+
+body h2 {
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #d87093;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul Header */
+header h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+nav li {
+    position: relative;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #cd7d97;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+nav li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style untuk Gambar */
+.banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar Pengembang */
+.developer-image {
+    width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Konten Section */
+.content-section {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #e667db;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Tiga Kolom Bawah Navbar */
+.container {
+    display: grid;
+    grid-template-columns: 200px auto 300px;
+    gap: 10px;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.kiri, .tengah, .kanan {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kiri{
+    text-align: center;
+}
+
+.logounram img {
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar kolom */
+    height: auto;    /* Mempertahankan rasio aspek gambar */
+    display: block;  /* Menghilangkan margin bawaan pada gambar */
+    margin: 0 auto;  /* Memusatkan gambar jika diperlukan */
+}
+
+.kanan {
+    padding: 20px; /* Ruang di dalam kelas */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    border-left: 1px solid #ccc; /* Garis pemisah di sebelah kiri */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.kanan h2 {
+    font-size: 1.5em; /* Ukuran font judul */
+    margin-bottom: 15px; /* Jarak di bawah judul */
+    color: #333; /* Warna teks */
+}
+
+.kanan ul {
+    list-style-type: none; /* Menghilangkan bullet pada list */
+    padding: 0; /* Menghilangkan padding pada list */
+}
+
+.kanan li {
+    margin-bottom: 10px; /* Jarak antar item list */
+}
+
+.kanan li a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: #000000; /* Warna teks tautan */
+    transition: color 0.3s; /* Efek transisi untuk hover */
+}
+
+.kanan li a:hover {
+    color: #000000; /* Warna teks saat hover */
+    font-weight: bold; /* Menebalkan teks saat hover */
+}

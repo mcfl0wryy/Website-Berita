@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>CoquetteNews</title>
+    <script>
+        function showContent(contentId) {
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(contentId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>CoquetteNews</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showContent('beranda')">BERANDA</a></li>
+                <li>
+                    <a href="javascript:void(0);">NASIONAL</a>
+                    <ul class="dropdown">
+                        <li><a onclick="showContent('politik')">POLITIK</a></li>
+                        <li><a onclick="showContent('lingkungan')">LINGKUNGAN</a></li>
+                        <li><a onclick="showContent('pendidikan')">PENDIDIKAN</a></li>
+                        <li><a onclick="showContent('ekonomi')">EKONOMI</a></li>
+                    </ul>
+                </li>
+                <li><a onclick="showContent('sepakbola')">SEPAK BOLA</a></li>
+                <li><a onclick="showContent('entertainment')">ENTERTAINMENT</a></li>
+                <li><a onclick="showContent('daerah')">DAERAH</a>
+                    <ul class="dropdown">
+                        <li><a onclick="showContent('yogyakarta')">YOGYAKARTA</a></li>
+                        <li><a onclick="showContent('aceh')">ACEH</a></li>
+                        <li><a onclick="showContent('papua')">PAPUA</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="Cari berita...">
+                <button>Cari</button>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="kiri">
+            <div class="logounram">
+                <img src="beranda/logounram.png" alt="logounram">
+            </div>
+            <p>DAVINA PUTRI UTAMI</p>
+            <P>E1R022005</P>
+            <p>5D/PEMOGRAMAN WEBSITE</p>
+        </div>
+        <div class="tengah">
+            <main>
+                <!-- Beranda Section -->
+                    <div id="beranda" class="content-section active">
+                        <h2>SELAMAT DATANG DI COQUETTE NEWS</h2>
+                        <p>Selamat datang di website kami, tempat Anda dapat menemukan berbagai informasi, layanan, dan inspirasi yang dirancang untuk memenuhi kebutuhan serta minat Anda. Kami dengan bangga menghadirkan platform yang tidak hanya informatif tetapi juga interaktif, memberikan pengalaman terbaik yang mengutamakan kenyamanan dan kemudahan bagi pengunjung.</p> 
+                        <p>Di sini, Anda dapat menjelajahi berbagai konten menarik, mulai dari artikel yang mengedukasi, berita terkini, hingga panduan yang bermanfaat untuk mendukung aktivitas Anda. Kami juga berkomitmen untuk terus berkembang dan menghadirkan inovasi guna memberikan nilai lebih kepada para pengguna.</p> 
+                        <p>Jadikan kunjungan Anda sebagai langkah untuk mengeksplorasi ide-ide baru, memperluas wawasan, dan mendapatkan solusi yang Anda cari. Jika ada pertanyaan atau masukan, jangan ragu untuk menghubungi kami melalui halaman kontak yang telah disediakan. Selamat menjelajahi, semoga pengalaman Anda di website kami penuh manfaat dan inspirasi!</p>
+                    </div>
+
+                <!-- Politik Section -->
+                    <div id="politik" class="content-section">
+                        <h2>Gibran Sapa Warga di Makassar, Bagi Buku Tulis hingga Susu ke Anak-Anak</h2>
+                        <img src="beranda/politik.jpg" alt="politik">
+                        <p>Dalam kunjungannya ke Kota Makassar, Gibran Rakabuming Raka, yang dikenal sebagai tokoh muda dan Wali Kota Solo, menunjukkan kepeduliannya kepada masyarakat dengan menyapa warga serta berbagi kebahagiaan bersama anak-anak setempat. Kegiatan ini berlangsung di salah satu ruang terbuka hijau kota, disambut hangat oleh ratusan warga.</p>
+                        <p>Gibran tidak hanya sekadar hadir untuk menyapa, tetapi juga membawa sejumlah hadiah berupa buku tulis, alat tulis, dan susu yang ia bagikan langsung kepada anak-anak. "Pendidikan dan kesehatan anak-anak adalah investasi masa depan. Saya ingin mereka tumbuh dengan semangat belajar dan hidup sehat," ujar Gibran dalam sambutannya yang diselingi senyuman khasnya.</p>
+                        <div id="hidden-content-politik" style="display: none;">
+                            <p>Anak-anak tampak antusias saat menerima bingkisan dari Gibran. Salah seorang anak bernama Fatimah, 10 tahun, mengaku senang karena buku tulis tersebut akan sangat membantunya dalam belajar. "Terima kasih, Kak Gibran! Saya jadi lebih semangat ke sekolah," ucap Fatimah dengan ceria.</p>
+                            <p>Selain berbagi, Gibran juga menghabiskan waktu berbincang dengan warga, mendengar aspirasi mereka, dan berfoto bersama. Kehadirannya membawa suasana yang akrab dan penuh kebersamaan. Dalam kesempatan tersebut, Gibran juga mengapresiasi semangat gotong royong warga Makassar dalam menjaga kebersihan lingkungan dan fasilitas umum.</p>
+                            <p>Kegiatan ini merupakan bagian dari rangkaian kunjungan Gibran ke sejumlah daerah, di mana ia berfokus pada isu-isu pendidikan, kesehatan, dan pemberdayaan masyarakat. "Saya selalu percaya bahwa anak-anak adalah masa depan kita, dan menjadi tanggung jawab kita untuk mendukung mereka agar bisa meraih cita-cita mereka," pungkasnya sebelum melanjutkan perjalanan ke lokasi lain.</p>
+                            <p>Aksi sosial ini mendapat tanggapan positif dari warga Makassar. Banyak yang berharap Gibran dapat terus menginspirasi dan memberikan perhatian kepada generasi muda, tidak hanya di Makassar tetapi di seluruh Indonesia.</p>
+                        </div>
+                        <button id="learn-more-politik" onclick="showMore('politik')">Learn More</button>
+                        <button id="hide-content-politik" onclick="hideContent('politik')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Lingkungan Section -->
+                    <div id="lingkungan" class="content-section">
+                        <h2>Perubahan iklim ancam keberadaan pulau-pulau kecil di NTB</h2>
+                        <img src="beranda/lingkungan.jpg" alt="lingkungan">
+                        <p>Lombok Barat - Pemerintah Provinsi Nusa Tenggara Barat mengatakan dampak fenomena perubahan iklim yang menaikkan muka air laut akibat pengaruh pemanasan global saat ini mengancam keberadaan pulau-pulau kecil di NTB.</p>
+                        <p>"Pulau-pulau kecil di Nusa Tenggara Barat 5-10 tahun mendatang ter ancam hilang," kata Asisten ll Sekretaris Daerah NTB Fathul Gani dalam aksi penanaman dan bersih pantai di Lombok Barat, Sabtu.</p>
+                        <div id="hidden-content-lingkungan" style="display: none;">
+                            <p>Ia mengatakan destinasi wisata yang saat ini menjadi salah satu unggulan NTB, berupa Gili Trawangan, Meno, dan Air atau dikenal Gili Tramena juga terancam hilang.</p>
+                            <p>Kawasan tiga pulau yang padat wisatawan itu, katanya, tak dikelilingi sabuk pelindung abrasi berupa pepohonan mangrove, sehingga potensial tenggelam akibat pengaruh perubahan iklim.</p>   
+                            <p>Gani mengajak masyarakat untuk menjaga lingkungan dengan menanam pohon dan tidak membuang sampah ke laut demi keberlanjutan generasi masa depan.</p>
+                            <p>"Kalau bukan kita, siapa lagi yang akan peduli terhadap lingkungan," ucapnya.</p>
+                            <p>Sebuah jurnal ilmiah yang diterbitkan Pusat Informasi Lingkungan Nasional NOAA menyebutkan rata-rata permukaan laut global saat ini telah naik sekitar 21-24 centimeter sejak 1880.</p>
+                            <p>Baca juga: Menteri LHK: Net zero emission dapat dicapai lebih awal sekitar 2057</p>
+                            <p>Pada 2023, rata-rata permukaan laut global menyentuh rekor tertinggi baru 101,4 milimeter di atas pencatatan pada 1993.</p>
+                            <p>Perubahan iklim membuat banjir pasang air laut meningkat 300-900 persen dalam kurun waktu lima dekade terakhir. Hal itu berdampak terhadap masyarakat pesisir yang menggantungkan hidup mereka kepada laut.</p>
+                            <p>Merujuk Rencana Pembangunan Jangka Panjang Daerah (RPJPD) Nusa Tenggara Barat periode 2025-2045, pemerintah daerah setempat mengusung visi untuk menjadi provinsi kepulauan yang maju, kuat, aman, berkelanjutan, dan sejahtera.</p>
+                            <p>Badan Perencanaan Pembangunan Daerah (Bappeda) Nusa Tenggara Barat mencatat ada 401 pulau-pulau kecil yang mendukung keberadaan dua pulau besar di NTB, yakni Pulau Lombok dan Pulau Sumbawa.</p>
+                            <p>Potensi ratusan pulau-pulau kecil tersebut adalah kekayaan yang diharapkan bisa mendorong NTB menjadi daerah maju dengan pendapatan per kapita yang besar.</p>
+                        </div>
+                        <button id="learn-more-lingkungan" onclick="showMore('lingkungan')">Learn More</button>
+                        <button id="hide-content-lingkungan" onclick="hideContent('lingkungan')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Pendidikan Section -->
+                    <div id="pendidikan" class="content-section">
+                        <h2>Banyak pelajar Indonesia tak bisa berhitung, Prabowo akan kenalkan matematika sejak TK – ‘Saya tanya berapa 6+8, mereka jawab 12’</h2>
+                        <img src="beranda/pendidikan.jpg" alt="pendidikan">
+                        <p>Menteri Pertahanan Prabowo Subianto mengungkapkan keprihatinannya terhadap rendahnya kemampuan matematika dasar di kalangan pelajar Indonesia. Dalam sebuah acara pendidikan yang digelar di Jakarta, Prabowo menceritakan pengalamannya bertemu sejumlah siswa yang kesulitan menjawab pertanyaan sederhana terkait penjumlahan.</p>
+                        <p>"Saya tanya mereka, berapa 6 ditambah 8? Ada yang jawab 12. Ini menjadi tanda bahwa ada yang perlu dibenahi dalam sistem pendidikan kita," ujar Prabowo dengan nada prihatin di hadapan para guru dan pejabat pendidikan.</p>
+                        <div id="hidden-content-pendidikan" style="display: none;">
+                            <p>Menurut Prabowo, kemampuan matematika dasar adalah fondasi penting bagi perkembangan intelektual siswa. Ia menekankan bahwa keterampilan ini seharusnya diperkenalkan sejak dini. Sebagai langkah konkret, Prabowo mengusulkan agar pelajaran matematika mulai dikenalkan secara menyenangkan kepada anak-anak sejak tingkat Taman Kanak-Kanak (TK).</p>
+                            <p>"Kita perlu pendekatan yang berbeda. Anak-anak kecil itu suka bermain, jadi matematika harus diajarkan dengan cara yang interaktif, menggunakan lagu, permainan, atau alat peraga. Kalau mereka suka, mereka akan belajar dengan semangat," tambahnya.</p>
+                            <p>Prabowo juga menyampaikan pentingnya melibatkan para guru dalam peningkatan metode pengajaran. Ia menyoroti perlunya pelatihan bagi pendidik agar dapat menggunakan pendekatan yang lebih kreatif dan efektif dalam mengajarkan konsep matematika.</p>
+                            <p>Beberapa data juga mendukung keprihatinan Prabowo. Menurut hasil studi internasional, performa siswa Indonesia dalam bidang matematika masih tertinggal dibandingkan negara-negara tetangga. Hal ini berdampak pada kompetensi siswa dalam memahami mata pelajaran lain yang membutuhkan kemampuan berhitung, seperti sains dan ekonomi.</p>
+                            <p>Rencana Prabowo untuk memperkenalkan matematika sejak TK mendapat beragam tanggapan. Sebagian besar masyarakat mendukung ide tersebut, berharap generasi muda Indonesia dapat lebih kompetitif secara global. Namun, ada pula yang mengingatkan pentingnya memastikan kebijakan ini dilaksanakan dengan kesiapan infrastruktur dan kurikulum yang memadai.</p>
+                            <p>"Ini adalah tugas besar bagi kita semua, bukan hanya guru atau sekolah, tetapi juga orang tua. Mari kita jadikan pendidikan sebagai prioritas utama untuk masa depan Indonesia," tutup Prabowo.</p>
+                            <p>Rencana ini menjadi salah satu langkah nyata Prabowo dalam memberikan perhatian lebih terhadap pembangunan sumber daya manusia Indonesia, khususnya dalam mencetak generasi yang cerdas, terampil, dan siap menghadapi tantangan global.</p>
+                        </div>
+                        <button id="learn-more-pendidikan" onclick="showMore('pendidikan')">Learn More</button>
+                        <button id="hide-content-pendidikan" onclick="hideContent('pendidikan')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Ekonomi Section -->
+                    <div id="ekonomi" class="content-section">
+                        <h2>PPN naik jadi 12% mulai 2025, apa dampaknya pada daya beli masyarakat?</h2>
+                        <img src="beranda/ekonomi.jpg" alt="ekonomi">
+                        <p>PPN naik jadi 12% mulai 2025, apa dampaknya pada daya beli masyarakat?</p>
+                        <p>Saat mengumumkan kepastian kenaikan PPN dalam rapat kerja dengan Komisi XI DPR pada Rabu (13/11), Menteri Keuangan Sri Mulyani mengatakan keputusan ini sudah dipertimbangkan “demi APBN” dan “bukan membabi buta”.</p>
+                        <div id="hidden-content-ekonomi" style="display: none;">
+                            <p>Meski begitu, sejumlah ekonom mengkhawatirkan “efek turunan” dari rencana pemerintah itu di tengah daya beli masyarakat yang tengah menurun.</p>
+                            <p>Adapun pengamat pajak menilai reaksi negatif publik menandai “masyarakat tidak percaya” kepada pemerintah kalau uang pajak yang mereka bayarkan “akan kembali ke masyarakat” dalam bentuk fasilitas publik maupun jaminan sosial.</p>
+                            <p>Pemilik Reynur Event Organizer yang berbasis di Bandung, Jawa Barat, itu menyebut kenaikan PPN dapat berdampak buruk terhadap pendapatan perusahaan—yang akhirnya bisa berujung ke gaji karyawan.</p>
+                            <p>“[Misalnya] anggaran per acara itu Rp2 miliar dan sudah termasuk pajak. Lalu acara diselenggarakan per akhir pekan alias empat kali sebulan. PPN jadi 12% itu membuat selisih pendapatan dalam satu bulan mencapai Rp 64 juta,” ujar Augie kepada wartawan Amahl Azwar yang melaporkan untuk BBC News Indonesia, Jumat (15/11). Uang sebesar itu, kata Augie, bisa untuk menggaji delapan sampai 12 orang karyawan. Perhitungan kasar Augie itu padahal belum mempertimbangkan kemungkinan kenaikan biaya produksi per acara.</p>
+                            <p>Walaupun bidang jasa untuk seni dan hiburan termasuk yang dikecualikan dari PPN, Augie menyebut klien event organizer-nya seringkali berasal dari instansi pemerintah.</p>
+                            <p>“[Sehingga] kalau transaksi sama mereka, harus PKP [Pengusaha Kena Pajak]. Jadi, kena PPN dan PPh [Pajak penghasilan]. PPh artis juga besar buat acara, dan [kadang dibebankan] event organizer,” ujarnya.</p>
+                            <p>Augie mengakui perspektifnya ini berasal dari kacamata pebisnis. Dia menyebut menurunnya pendapatan kantor akan berimbas ke banyak hal, termasuk penurunan fasilitas dan tunjangan atau bonus para karyawan.</p>
+                            <p>“Bahkan bisa jadi saya memilih memutuskan hubungan kerja agar karyawan yang bertahan tidak perlu turun pendapatannya,” tutur Augie.</p>
+                            <p>Di Kerobokan, Bali, penyedia jasa makanan sehat Nimas Utama juga khawatir akan kenaikan PPN. Dia yakin usahanya akan terkena dampak, meski bisnisnya termasuk yang dikecualikan dari skema pajak itu.</p>
+                            <p>“Pada akhirnya [kenaikan PPN] akan mempengaruhi daya beli masyarakat. Setelah pandemi Covid pun, kemampuan ekonomi masyarakat untuk membeli sesuatu sudah jauh menurun. Pastinya itu akan merambah ke kemampuan kita untuk menjual barang,” tutur Nimas secara terpisah.</p>
+                        </div>
+                        <button id="learn-more-ekonomi" onclick="showMore('ekonomi')">Learn More</button>
+                        <button id="hide-content-ekonomi" onclick="hideContent('ekonomi')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Sepak Bola Section -->
+                    <div id="sepakbola" class="content-section">
+                        <h2>Bagaimana Peluang Indonesia di Kualifikasi Piala Dunia 2026?</h2>
+                        <img src="beranda/sepakbola.jpg" alt="sepakbola">
+                        <p>Timnas Indonesia kalah dari Jepang 0-4 di kandang sendiri, Stadion GBK pada matchday kelima Grup C ronde ketiga Kualifikasi Piala Dunia 2026 Zona Asia, Jumat (15/11) malam WIB. Samurai Biru unggul 2-0 di babak pertama, lalu gandakan di babak kedua.</p>
+                        <p>Hasil itu membuat Timnas Indonesia sementara berada di posisi buncit Grup C dengan tiga poin dari lima laga, hasil dari tiga kali imbang dan dua kali kalah. Di atasnya adalah Bahrain dengan lima poin, lalu China, Arab Saudi, dan Australia masing-masing enam poin, sementara Jepang di posisi puncak dengan 13 poin.</p>
+                        <div id="hidden-content-sepakbola" style="display: none;">
+                            <p>Grup C ronde ketiga Kualifikasi Piala Dunia 2026 masih menyisakan lima laga. Hitung-hitungannya, peluang Timnas Indonesia untuk naik peringkat dengan target finis di empat besar masih ada!</p>
+                            <p>Untuk diketahui, tim yang finis di peringkat pertama dan kedua akan langsung dapat tiket lolos ke putaran final Piala Dunia 2026. Tim yang finis di peringkat ketiga dan keempat bakal lanjut ke ronde keempat, untuk diadu dengan empat tim lainnya yang finis di peringkat yang sama dari Grup A dan Grup B.</p>
+                            <p>Tim yang finis di peringkat kelima dan keenam akan gugur. Oh iya, seluruh 18 tim dari semua grup turut sudah dapat tiket lolos ke putaran final Piala Asia 2027.</p>
+                            <p>Timnas Indonesia punya tiga laga kandang tersisa. Wajib hukumnya buat pasukannya Shin Tae-yong untuk tidak kehilangan poin di rumah sendiri!</p>
+                            <p>Posisi Indonesia sementara berjarak tidak lebih dari tiga poin dari empat tim di atasnya. Untuk urusan selisih gol, Indonesia sama dengan Bahrain (-5) dan lebih baik dari China (-8).</p>
+                            <p>Di pertemuan pertama, Indonesia bisa menahan imbang Arab Saudi, Australia, dan Bahrain. Itu artinya, Skuad Garuda punya motivasi oke untuk kembali mencuri poin malah seharusnya memaksimalkan peluang untuk bisa menang. Khususnya di laga kandang, kontra Arab Saudi, Bahrain, dan China.</p>
+                            <p>Kita hitung laga terdekat saja kontra Arab Saudi, tiga poin bisa dicap sebagai harga mati. Jika skemanya Indonesia bisa menang atas The Green Falcon sembari berharap Jepang kalahkan China dan Australia kalahkan Bahrain, maka Skuad Garuda mampu melesat naik ke peringkat keempat menggeser China dan Bahrain!</p>
+                            <p>Jika di laga kandang Indonesia bisa sapu bersih kemenangan pada tiga laga, maka hitungannya adalah total 12 poin bisa didapat (ditambah dari tiga poin yang sudah didapat). Poin itu diproyeksi sudah cukup bawa Jay Idzes dkk untuk finis di peringkat keempat.</p>
+                            <p>Jalan masih cukup panjang. Pertandingan kontra Arab Saudi, patut diibaratkan seperti final. Menang tidak boleh ditawar, demi naik peringkat dan bangkitkan moral!</p>
+                        </div>
+                        <button id="learn-more-sepakbola" onclick="showMore('sepakbola')">Learn More</button>
+                        <button id="hide-content-sepakbola" onclick="hideContent('sepakbola')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Entertainment Section -->
+                    <div id="entertainment" class="content-section">
+                        <h2>Dipeluk Lisa Blackpink, Indra Herlambang Gemetar: Nggak Akan Mandi Seumur Hidup</h2>
+                        <img src="beranda/entertainment.jpg" alt="entertainment">
+                        <p>Indra Herlambang didaulat menjadi presenter acara fan meetup Lisa di Beach City International Stadium, Jakarta pada Jumat (15/11/2024) malam. Ada banyak interaksi menarik dari mereka berdua di atas panggung.</p>
+                        <p>Salah satunya adalah momen saat Lisa memeluk Indra Herlambang. Anggota Blackpink ini memeluk sang presenter dengan ramah dan hangat hingga membuat terharu.</p>
+                        <div id="hidden-content-entertainment" style="display: none;">
+                            <p>Saking terharunya, Indra Herlambang sampai gemetar dan menangis di belakang panggung. Sepertinya dia benar-benar tidak menyangka bisa berinteraksi begitu dekat dengan pelantun lagu “Money” tersebut.</p>
+                            <p>“Aduh gue gemeteran sumpah, sekarang sudah boleh nangis kan, sudah selesai kan? Air mata keluar loh, baik banget Lisa,” ujarnya dengan air mata bahagia yang mulai menetes.</p>
+                            <p>Demi mempertahankan bekas pelukan sang idola, Indra Herlambang bahkan tak ingin mandi. “Aduh, aku nggak akan mandi seumur hidup,” ungkapnya sambil senyum.</p>
+                            <p>Lewat akun X pribadinya, Indra pun mengekspresikan rasa bahagianya usai dipercaya menjadi MC acara tersebut. Dia juga mengungkap kepribadian Lisa yang sangat baik. 
+                                “Saya tidak berbohong ketika saya berkata, ‘Hari ini adalah salah satu hari terbaik dalam hidup saya.’ Bisa bertemu Lisa secara langsung saja sudah sangat luar biasa, tapi merasakan kebaikan hatinya secara langsung adalah hal yang luar biasa,” cuitnya.
+                            </p>
+                            <p>Diberitakan sebelumnya, acara ini dimulai sekitar pukul 19.50 WIB. Dalam balutan busana berwarna merah metalik, Lisa membuka penampilan pertamanya dengan lagu “Lalisa” diiringi oleh back dancer.</p>
+                            <p>Setelah memanaskan suasana dengan “Lalisa”, penyanyi asal Thailand ini menyapa ribuan fansnya di Jakarta. “Hi Jakarta aku Lisa, excited banget ketemu kalian hari ini, ayo kita have fun hari ini!” ujarnya ceria.</p>
+                        </div>
+                        <button id="learn-more-entertainment" onclick="showMore('entertainment')">Learn More</button>
+                        <button id="hide-content-entertainment" onclick="hideContent('entertainment')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Yogyakarta Section -->
+                    <div id="yogyakarta" class="content-section">
+                        <h2>Penganiayaan di Jambusari Sleman, 1 Orang Ditetapkan Tersangka</h2>
+                        <img src="beranda/yogyakarta.jpg" alt="yogyakarta">
+                        <p>Lebih lanjut, Ardi menjelaskan duduk perkara pengeroyokan tersebut. Awalnya, korban bersama temannya mengendarai mobil dan terjadi senggolan dengan orang yang diduga sebagai pelaku.</p>
+                        <p>Orang tersebut kemudian memukul mobil korban. Selanjutnya, oleh korban dikejar hingga sampai di lokasi pelaku tinggal di Jambusari.</p>
+                        <div id="hidden-content-yogyakarta" style="display: none;">
+                            <p>"Setelah dikejar ternyata yang memukul itu menuju ke tempat atau lokasi mereka tinggal. Sampai lokasi satu orang turun dan memanggil teman-temannya untuk kemudian mengeroyok korban," ujarnya.</p>
+                            <p>Sebelumnya, sebanyak 5 orang diamankan jajaran Polresta Sleman saat penggerebekan di Perumahan Jambusari, Wedomartani, Ngemplak, Sleman. Kelimanya ditangkap karena diduga melakukan penganiayaan.</p>
+                            <p>"Tadi pagi terjadi tindak pidana penganiayaan dengan korban satu orang dan alhamdulillah kondisinya stabil sekarang sedang mendapatkan perawatan di rumah sakit Sardjito," kata Kapolresta Sleman Kombes Yuswanto Ardi kepada wartawan, Jumat (15/11).</p>
+                            <p>Ardi mengatakan kejadian penganiayaan itu terjadi sekitar pukul 04.00 WIB dini hari tadi. Dari laporan, kemudian polisi melakukan penyelidikan dan mendapatkan informasi lokasi para pelaku yakni di salah satu rumah di daerah Jambusari.</p>
+                            <p>"Kemudian kita melakukan penyelidikan dan juga ternyata kami sinkronkan dengan laporan informasi yang kami dapatkan dari warga bahwa di lokasi kejadian itu terdapat sebuah rumah yang sering digunakan untuk kumpul-kumpul dan membuat resah warga masyarakat," ujarnya.</p>
+                            <p>"Kemudian dalam kesempatan itu juga kita mendapatkan informasi bahwa pelaku lari ke arah rumah tersebut dan pagi ini kita lakukan penggeledahan," imbuh dia.</p>
+                            <p>Ketika dilakukan penggeledahan di salah satu rumah itu, polisi menemukan sejumlah senjata tajam. Selain menyita senjata, polisi juga menangkap 5 orang.</p>
+                            <p>"Tadi kami menemukan berbagai macam senjata tajam ada, pedang, golok, kemudian celurit termasuk panah tombak yang sementara masih kita inventarisir. Pada kesempatan ini juga kami amankan 5 orang yang yang masih saat ini kita melakukan penyelidikan," katanya.</p>
+                        </div>
+                        <button id="learn-more-yogyakarta" onclick="showMore('yogyakarta')">Learn More</button>
+                        <button id="hide-content-yogyakarta" onclick="hideContent('yogyakarta')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = ' block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Aceh Section -->
+                    <div id="aceh" class="content-section">
+                        <h2>Polisi WH Razia Pengguna Pakaian yang Tidak Sesuai Syariat di Banda Aceh</h2>
+                        <img src="beranda/aceh.jpg" alt="aceh">
+                        <p>BANDA ACEH - Puluhan Pria dan Wanita berbusana ketat terjading razia oleh Satuan Polisi Pamong Praja dan Wilayatul Hisbah(Satpol PP-WH) Provinsi Aceh berlangsung Jalan Sultan Malikul Saleh, Kec, Lhong Raya, kawasan Stadion Harapan Lhong Raya, Banda Aceh pada Rabu, (13/11/2024) kemarin.</p>
+                        <p>Razia Gabungan yang digagas oleh Satpol PP- WH Aceh turut dikawal oleh TNI/Polri, lebih tertuju kepada masyarakat yang menggunakan busana ketat.</p>
+                        <div id="hidden-content-aceh" style="display: none;">
+                            <p>Plt Kabid Penegakan Syariat Islam Satpol PP dan WH Aceh, Marzuki M Ali kepada media mengatakan, "razia kali ini kegiatan rutin sesuai dengan jawab, tujuan daripada itu razia kali ini adalah menindaklanjuti laporan masyarakat, yang selama ini marak berolahraga dengan pakaian ketat," katanya.</p>
+                            <p>Dia mengatakan, razia pada hari lebih kepada Masyarakat yang memakai busana ketat, bila mana mereka terjaring dalam razia maka kita beri nasehat kedepan tidak lagi memakai baju maupun celana ketat saat berolah raga.</p>
+                            <p>“Sasaranya adalah pelaku pelanggar Qanun Nomor 11 tahun 2020 tentang pakaian ketat, Pria dan Wanita yang tidak berpakai islami, pelaku hanya kita beritakan pemahaman, Mensosialisasikan kepada pelaku tidak lagi memakai busana ketat, baikpun berolahraga maupun saat berpergian keluar rumah.” Ujar Marzuki.</p>
+                            <p>Marzuki Ali juga mengimbau kepada masyarakat yang berolahraga pergunakan pakaian yang tidak melanggar dengan Syariat Islam, selain berolahraga juga saat keluar rumah.</p>
+                        </div>
+                        <button id="learn-more-aceh" onclick="showMore('aceh')">Learn More</button>
+                        <button id="hide-content-aceh" onclick="hideContent('aceh')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+
+                <!-- Papua Section -->
+                    <div id="papua" class="content-section">
+                        <h2>Kapolri Ungkap Dugaan Penyebab Jumlah Anggota KKB Papua Makin Bertambah</h2>
+                        <img src="beranda/papua.jpeg" alt="papua">
+                        <p>Jakarta - Kapolri Jenderal Listyo Sigit Prabowo mengungkap jumlah anggota kriminal bersenjata (KKB) Papua semakin bertambah melebihi 1.400. Sigit menduga peningkatan anggota KKB tersebut turut dipicu penolakan terhadap pembangunan di Papua.</p>
+                        <p>Dilansir dari detikNews, Sigit menjelaskan, jumlah anggota KKB awalnya 300 orang. Namun jaringan KKB ini bertambah setelah pengumuman daerah otonomi baru (DOB) dan juga perubahan terkait dengan kebijakan dana otonomi khusus (Otsus) Papua.</p>
+                        <div id="hidden-content-papua" style="display: none;">
+                            <p>"Kita lihat sebelum pengumuman DOB dan juga perubahan terkait dengan kebijakan dana Otsus. Saya ingat beberapa tahun yang lalu jumlah KKB kita masih kurang lebih sekitar 300," ungkap Sigit dalam acara 'Syukuran HUT Ke-79 Korps Brimob Polri' di Mako Brimob Kelapa Dua, Depok, Jawa Barat, Kamis (14/11/2024).</p>
+                            <p>Sigit mengungkap anggota KKB saat ini tercatat melebihi 1.400 orang. Jaringannya yang tersebar di sejumlah daerah juga semakin meningkat.</p>
+                            <p>"Namun pasca itu (pengumuman DOB dan perubahan kebijakan dana Otsus), yang terjadi saat ini jumlah KKB kita melebihi 1.400 kalau nggak ya. Dan jaringannya juga semakin bertambah," ucapnya.</p>
+                            <p>"Artinya apa? Apa yang menjadi kebijakan pemerintah pusat untuk disejahterakan masyarakat Papua, belum bisa diterima dengan baik atau mungkin belum tersosialisasi dengan baik. Sehingga, yang ada justru sebaliknya, jumlah KKB nya yang semakin meningkat," sambung Sigit.</p>
+                            <p>Sigit pun memberi pesan kepada jajaran untuk siap menghadapi situasi tersebut. Dia menginstruksikan personelnya untuk ikut memberi pemahaman kepada warga Papua bahwa NKRI serius ingin menyejahterakan Papua.</p>
+                            <p>"Sehingga di satu sisi, rekan-rekan tentunya harus siap menghadapi ini. Di sisi lain bagaimana memahamkan saudara-saudara kita di Papua. Bahwa NKRI ini serius untuk betul-betul bisa meningkatkan kesejahteraan saudara-saudara kita di Papua, ini menjadi tantangan tersendiri," tutupnya.</p>
+                            <p>Sebelumnya diberitakan, Sigit sempat melaporkan update soal KKB dalam rapat bersama Komisi III DPR di Gedung MPR/DPR/DPD RI, Senayan, Jakarta, Senin (11/11). Dalam kesempatannya, Sigit menyebut ada 24 jaringan KKB dengan jumlah kekuatan 1.438 orang.</p>
+                            <p>"Sampai saat ini terdapat 24 jaringan KKB dengan total jumlah kekuatan 1.438 anggota, dan mereka memiliki 361 senjata api yang tersebar pada 14 kabupaten," kata Sigit dalam rapat.</p>
+                        </div>
+                        <button id="learn-more-papua" onclick="showMore('papua')">Learn More</button>
+                        <button id="hide-content-papua" onclick="hideContent('papua')" style="display: none;">Sembunyikan</button>
+                    </div>
+                    <script>
+                        function showMore(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'block';
+                            document.getElementById('learn-more-' + section).style.display = 'none';
+                            document.getElementById('hide-content-' + section).style.display = 'inline-block';
+                        }
+                        function hideContent(section) {
+                            document.getElementById('hidden-content-' + section).style.display = 'none';
+                            document.getElementById('learn-more-' + section).style.display = 'inline-block';
+                            document.getElementById('hide-content-' + section).style.display = 'none';
+                        }
+                    </script>
+            </main>
+        </div>
+        <div class="kanan">
+            <h2>Berita Terpopuler</h2>
+            <ul>
+                <li><a href="#">Siap Jadi Orang Kaya Baru di 2025...</a></li>
+                <li><a href="#">Selamat Tinggal Hidup Susah...</a></li>
+                <li><a href="#">Sedang Tidur Pun Dihormati...</a></li>
+                <li><a href="#">Kekuatan Doa: 6 Shio...</a></li>
+                <li><a href="#">Dijatuhi Rezeki Bertubi-tubi...</a></li>
+            </ul> 
+        </div> 
+    </div>
+</body>
+</html>
